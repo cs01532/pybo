@@ -1,0 +1,9 @@
+/* 부트스트랩 적용으로 인한 삭제
+textarea {
+    width:100%;
+}
+
+input[type=submit]{
+    margin-top:10px;
+}
+*/
