@@ -19,7 +19,7 @@ base.html을 상속받은후 아래 알맹이만 작성함
                 <tr>
                     <td>{{ forloop.counter }}</td>
                     <td>
-                        <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
+                        <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a> <!-- urls.py에 name='detail'이라는 별칭을 가진 url패턴이 목적지 url이다. question.id값을 url에 같이 넘긴다.-->
                     </td>
                     <td>{{ question.create_date }}</td>
                 </tr>
@@ -31,6 +31,7 @@ base.html을 상속받은후 아래 알맹이만 작성함
                 {% endif %}
                 </tbody>
             </table>
+            <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문등록하기</a>
         </div>
 
 {% endblock %}
